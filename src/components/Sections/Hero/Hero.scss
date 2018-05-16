@@ -1,0 +1,226 @@
+@import 'sass/_base';
+
+.hero {
+    margin-top: 64px;
+
+    @include breakpoint(l) {
+        margin-top: 0;
+    }
+
+    &__content-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        @include breakpoint(l) {
+            height: 100vh;
+            min-height: 600px;
+            width: 50%;
+            float: right;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__heading {
+        font-size: 24px;
+        font-weight: 100;
+        margin-top: 24px;
+
+        @include breakpoint(l) {
+            font-size: 32px;
+            font-weight: 300;
+            color: #263648;
+            width: 256px;
+            font-weight: 300;
+            padding-top: 52px;
+        }
+
+        @include breakpoint(xl) {
+            font-size: 44px;
+            width: 335px;
+        }
+    }
+
+    &__buttons-container {
+        display: flex;
+        margin-bottom: 14px;
+        flex-direction: column;
+
+        @include breakpoint(l) {
+            display: block;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        color: #0492bd;
+        line-height: 1.79;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &__subheading {
+
+        @include breakpoint(l) {
+            display: block;
+            font-size: 14px;
+            color: #263648;
+        }
+    }
+
+    &__secondary-content {
+        display: none;
+
+        @include breakpoint(l) {
+            display: block;
+        }
+    }
+
+    @include breakpoint(l) {
+        display: block;
+        min-height: 600px;
+    }
+
+    &__video-container {
+        min-height: 365px;
+        height: 365px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background-image: url('./assets/background.jpg');
+
+        @include breakpoint(s) {
+            height: 440px;
+        }
+
+        @include breakpoint(m) {
+            height: 450px;
+            background-size: cover;
+            position: relative;
+        }
+
+        @include breakpoint(l) {
+            position: relative;
+            height: calc(100vh - 70px);
+            min-height: 600px;
+            width: 50%;
+            float: left;
+        }
+    }
+
+    &__video {
+        height: 326px;
+        min-height: 326px;
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        margin-bottom: 27px;
+        margin-left: -4px;
+
+        @include breakpoint(s) {
+            margin-left: -27px;
+            height: 370px;
+            min-height: 367px;
+            margin-bottom: 30px;
+        }
+
+        @include breakpoint(m) {
+            background-size: cover;
+            min-height: 368px;
+            margin-top: 20px;
+            margin-left: -28px
+        }
+
+        @include breakpoint(l) {
+            height: 475px;
+            margin-top: 0;
+            bottom: 0;
+            margin-left: -33px;
+            position: absolute;
+            z-index: 0;
+            margin-bottom: 45px;
+        }
+
+        @include breakpoint(xl) {
+            height: 567px;
+        }
+    }
+
+    &__iphone {
+        min-width: 279px;
+        width: 279px;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        right: 0;
+
+        @include breakpoint(s) {
+            width: 50vw;
+            min-width: 315px;
+            right: auto;
+            max-width: 320px;
+        }
+
+        @include breakpoint(m) {
+            width: 312px;
+            height: 413px;
+            max-width: initial;
+        }
+
+        @include breakpoint(l) {
+            height: 535px;
+            width: 400px;
+        }
+
+        @include breakpoint(xl) {
+            position: absolute;
+            width: 460px;
+            bottom: 0;
+            z-index: 1;
+            margin-left: 5px;
+            height: 630px;
+        }
+
+    }
+
+    &__video-content {
+        min-height: 365px;
+        height: 365px;
+        width: 100vw;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        bottom: 0;
+
+        @include breakpoint(s) {
+            position: absolute;
+            bottom: 0;
+        }
+
+        @include breakpoint(m) {
+            height: 450px;
+            min-height: 450px;
+            align-items: center;
+            margin-left: 30px;
+        }
+
+        @include breakpoint(l) {
+            width: 50vw;
+            height: auto;
+            min-height: auto;
+            position: absolute;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            bottom: 0;
+        }
+    }
+
+}

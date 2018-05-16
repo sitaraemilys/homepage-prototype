@@ -1,0 +1,20 @@
+// Breakpoint options
+
+$breakpoints: (
+    'xs': (max-width: 320px),
+    's': (min-width: 321px),
+    'm': (min-width: 736px),
+    'l': (min-width: 1023px),
+    'xl': (min-width: 1280px)
+);
+
+@mixin breakpoint($name) {
+    @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Couldn't find a breakpoint named `#{$name}`.";
+    }
+}

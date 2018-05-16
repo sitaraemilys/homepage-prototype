@@ -1,0 +1,21 @@
+$bell-animation-duration: 700ms;
+
+.cs-svg {
+
+    .icon-state-hover {
+        display: none;
+    }
+
+    .no-touch &:hover {
+
+        .icon-state-normal {
+            display: none;
+        }
+
+        .icon-state-hover {
+
+            display: inline;
+        }
+    }
+
+}

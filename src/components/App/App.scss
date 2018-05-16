@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "AktivGrotesk";
+    src: url("fonts/aktiv_grotesk_hairline-webfont.ttf") format("ttf"),
+         url("fonts/aktiv_grotesk_hairline-webfont.woff") format("woff"),
+          url("fonts/aktiv_grotesk_hairline-webfont.woff2") format("woff2");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "AktivGrotesk";
+    src: url("fonts/aktiv_grotesk_light-webfont.ttf") format("ttf"),
+         url("fonts/aktiv_grotesk_light-webfont.woff") format("woff"),
+          url("fonts/aktiv_grotesk_light-webfont.woff2") format("woff2");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "AktivGrotesk";
+    src: url("fonts/aktiv_grotesk_medium-webfont.ttf") format("ttf"),
+         url("fonts/aktiv_grotesk_medium-webfont.woff") format("woff"),
+          url("fonts/aktiv_grotesk_medium-webfont.woff2") format("woff2");
+    font-weight: 500;
+}
+/* stylelint-disable selector-no-type */
+
+body {
+    margin: 0;
+    font-family: AktivGrotesk;
+    font-weight: 100;
+    color: #5a6470;
+    overflow-x: hidden;
+}
+
+.App {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

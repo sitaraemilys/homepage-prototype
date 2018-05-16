@@ -1,0 +1,13 @@
+.tick-ul {
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &__svg {
+        padding-right: 7px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #0492bd;
+    }
+}

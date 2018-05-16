@@ -1,0 +1,81 @@
+@import 'sass/_base';
+
+.button {
+    text-align: center;
+    height: 36px;
+    background-color: #0492bd;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 100;
+    transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+    margin-bottom: 10px;
+    overflow: hidden;
+    color: white;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    position: relative;
+    line-height: 1;
+    cursor: pointer;
+    margin-right: 7px;
+    box-shadow: 0 2px 5px 0 #E8E8E8;
+
+    @include breakpoint(l) {
+        width: 170px;
+    }
+
+    &:hover,
+    &--active,
+    &--pending {
+        box-shadow: 0 2px 0 0 rgba(white, 0);
+        transform: translateY(2px);
+    }
+
+    &:disabled {
+        background: rgba(white, 0.5);
+        transform: none;
+        box-shadow: none;
+
+        &.button--pending {
+            box-shadow: 0 2px 0 0 rgba(white, 0);
+            transform: translateY(2px);
+        }
+    }
+
+    &__loader {
+        display: block;
+
+        .button__text {
+            visibility: hidden;
+        }
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -10px;
+            animation: spin 1s linear infinite;
+        }
+
+    }
+
+    &--responsive {
+        width: 270px;
+
+        @include breakpoint(l) {
+            width: 126px;
+        }
+    }
+
+    &--responsive-secondary {
+        background: transparent;
+        color: #0492bd;
+        border: 1px solid #0492bd;
+        width: 270px;
+
+        @include breakpoint(l) {
+            width: 126px;
+        }
+    }
+}

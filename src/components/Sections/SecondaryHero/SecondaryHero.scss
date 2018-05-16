@@ -1,0 +1,116 @@
+@import 'sass/_base';
+
+.video-desktop-container {
+    display: none;
+
+    @include breakpoint(m) {
+        transition: all 2s;
+        transform: scale(1.1);
+
+        &--scale {
+            display: block;
+            min-height: 600px;
+            max-height: 763px;
+            max-width: 523.5px;
+            transform: scale(1);
+        }
+    }
+
+}
+
+
+.secondary-hero {
+
+        &__video-desktop {
+            display: none;
+
+            @include breakpoint(m) {
+                display: block;
+                width: 542px;
+                margin-top: 85px;
+                min-height: 500px;
+                max-height: 500px;
+                max-width: 542px;
+            }
+
+            @include breakpoint(l) {
+                margin-top: 0;
+            }
+
+        }
+
+        &__video-mobile {
+            width: 101vw;
+
+
+            @include breakpoint(m) {
+                display: none;
+            }
+        }
+
+        &__content-container {
+            display: flex;
+            justify-content: center;
+
+            @include breakpoint(m) {
+                margin-top: 80px;
+            }
+
+            @include breakpoint(l) {
+                height: calc(100vh - 70px);
+                min-height: 600px;
+                width: 50%;
+                float: right;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 0;
+            }
+        }
+
+        &__list {
+            list-style: none;
+            padding-left: 0;
+            color: #0492bd;
+            line-height: 1.79;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        &__subheading {
+            font-size: 14px;
+            color: #263648;
+        }
+
+        @include breakpoint(l) {
+            display: block;
+            height: calc(100vh - 70px);
+            min-height: 600px;
+        }
+
+}
+
+.video-container {
+    min-height: 390px;
+
+    @include breakpoint(s) {
+        min-height: 450px;
+    }
+
+    @include breakpoint(m) {
+        background-image: linear-gradient(37deg, #ece7e6, #f8f3f3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        min-height: 500px;
+    }
+
+    @include breakpoint(l) {
+        height: calc(100vh - 70px);
+        min-height: 600px;
+        float: left;
+        width: 50%;
+    }
+}

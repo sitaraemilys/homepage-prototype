@@ -1,0 +1,73 @@
+@import 'sass/_base';
+
+.offers {
+
+    @include breakpoint(l) {
+        display: block;
+        height: calc(100vh - 70px);
+    }
+
+        &__animation-container {
+            background-image: linear-gradient(38deg, #def2f8, #edf7fa);
+            display: flex;
+            justify-content: center;
+            min-height: 390px;
+
+            div {
+                overflow: visible !important;
+
+                svg {
+                    margin-top: 32px;
+
+                    @include breakpoint(l) {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            @include breakpoint(s) {
+                min-height: 450px;
+            }
+
+            @include breakpoint(l) {
+                float: left;
+                width: 50%;
+                display: flex;
+                height: calc(100vh - 70px);
+                min-height: 600px;
+                align-items: center;
+
+                div {
+                    transition: transform 2s;
+                    transform: scale(1.1);
+                }
+
+                &--scale {
+
+                    div {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        &__content-container {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            @include breakpoint(l) {
+                margin-top: 0;
+                width: 50%;
+                float: right;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: calc(100vh - 70px);
+                min-height: 600px;
+            }
+        }
+}

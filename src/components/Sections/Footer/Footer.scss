@@ -1,0 +1,48 @@
+.coaching {
+    height: calc(100vh - 70px);
+    min-height: 600px;
+
+    &__animation-container {
+        float: left;
+        width: 50%;
+        min-width: 640px;
+        display: flex;
+        height: calc(100vh - 70px);
+        min-height: 600px;
+        align-items: center;
+        background-image: linear-gradient(38deg, #f3f2ee, #faf4ee);
+
+        div {
+            transition: transform 2s;
+            transform: scale(1.1);
+        }
+
+        &--scale {
+
+            div {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__content-container {
+        width: 50%;
+        min-width: 640px;
+        float: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        height: calc(100vh - 70px);
+        min-height: 600px;
+
+    }
+}
+
+.heading {
+
+}
+
+.paragraph {
+
+}

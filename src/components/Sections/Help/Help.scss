@@ -1,0 +1,52 @@
+@import 'sass/_base';
+
+.help {
+    height: 100vh;
+    background-color: #f6f3f3;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(l) {
+        height: 512px;
+    }
+
+    &__container {
+        padding-top: 24px;
+        width: 80vw;
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint(l) {
+            height: 450px;
+            min-height: 450px;
+        }
+    }
+
+    &__logo {
+        opacity: 0.44;
+    }
+
+    &__link {
+        color: #be9c76;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 24px;
+        padding-top: 12px;
+    }
+
+    &__paragraph {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

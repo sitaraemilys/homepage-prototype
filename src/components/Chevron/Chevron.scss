@@ -1,0 +1,11 @@
+@import 'sass/_base';
+
+.chevron {
+    display: none;
+
+    @include breakpoint(l) {
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+    }
+}

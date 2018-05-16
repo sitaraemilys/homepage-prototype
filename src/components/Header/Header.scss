@@ -1,0 +1,126 @@
+@import 'sass/_base';
+
+.header-mobile {
+    display: flex;
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 30px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+    position: fixed;
+    width: 92%;
+    background: white;
+    margin-bottom: 24px;
+    z-index: 100;
+
+    &__cta {
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    @include breakpoint(s) {
+        width: 94vw;
+    }
+
+    @include breakpoint(m) {
+        width: 96vw;
+    }
+
+    @include breakpoint(l) {
+        display: none;
+    }
+}
+
+.header {
+    display: none;
+
+    @include breakpoint(l) {
+        display: block;
+        width: 97vw;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+
+        &__content {
+            font-size: 16px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        &__title {
+            width: 120px;
+            font-size: 14px;
+        }
+
+        &__logo {
+            z-index: 100;
+        }
+    }
+
+}
+
+.header-secondary {
+    display: none;
+
+    @include breakpoint(l) {
+        display: block;
+        width: 100vw;
+        z-index: 100;
+        align-items: center;
+        display: flex;
+        padding: 15px;
+        position: fixed;
+        top: 0;
+        background-color: white;
+        max-height: 60px;
+        height: 760px;
+        transition: max-height 0.2s ease-in-out;
+
+        &__logo {
+            padding-top: 15px;
+        }
+
+        &__content {
+            display: flex;
+            margin-left: 50px;
+            justify-content: space-evenly;
+            width: 1000px;
+            padding-top: 30px;
+
+            @include breakpoint(xl) {
+                margin-left: 100px;
+            }
+        }
+
+        &__title {
+            font-size: 14px;
+            text-decoration: none;
+            color: #5a6470;
+
+            &--active {
+                font-weight: 300;
+                font-weight: 500;
+                padding-bottom: 15px;
+                border-bottom: 1.5px solid #5a6470;
+            }
+        }
+    }
+
+}
+
+.hide {
+    max-height: 0;
+	overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
