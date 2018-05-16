@@ -52,7 +52,7 @@ class Header extends React.Component {
 
     render() {
         const primaryHeaderClass = this.state.hasScrolled ? 'hide' : 'header';
-        const secondaryHeaderClass = this.state.hasScrolled ? 'header-secondary' : 'header-secondary--hide';
+        const secondaryHeaderClass = this.state.hasScrolled ? 'header-secondary' : 'header-secondary header-secondary--hide';
 
         const sectionId = this.props.sectionId;
 
