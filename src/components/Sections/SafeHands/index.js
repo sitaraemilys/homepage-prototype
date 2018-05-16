@@ -15,11 +15,11 @@ export default class SafeHands extends React.Component {
         this.state = {isStopped: true, isPaused: false, animationSize: 570};
         this.handleScroll = this.handleScroll.bind(this);
         this.handleResize = this.resize.bind(this);
-        this.handleResize();
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
+        this.resize();
         window.addEventListener('resize', this.handleResize);
     }
 
@@ -34,8 +34,9 @@ export default class SafeHands extends React.Component {
     }
 
     resize() {
-        if (window.innerWidth < 1024) {
+        if (window.innerWidth < 1023) {
             this.setState({animationSize: 570});
+            this.forceUpdate();
         } else {
             this.setState({animationSize:750});
         }

@@ -30,9 +30,9 @@ class Header extends React.Component {
 
     handleScroll(event) {
         const offsetY = window.pageYOffset;
-        if (offsetY >= 590) {
+        if (offsetY >= 590 && offsetY <= 5750) {
             this.setState({hasScrolled: true});
-        } else if (offsetY <= 605) {
+        } else if (offsetY <= 605 || offsetY > 5800) {
             this.setState({hasScrolled: false});
         }
 
@@ -52,7 +52,7 @@ class Header extends React.Component {
 
     render() {
         const primaryHeaderClass = this.state.hasScrolled ? 'hide' : 'header';
-        const secondaryHeaderClass = this.state.hasScrolled ? 'header-secondary' : 'hide';
+        const secondaryHeaderClass = this.state.hasScrolled ? 'header-secondary' : 'header-secondary--hide';
 
         const sectionId = this.props.sectionId;
 
