@@ -8,6 +8,8 @@ import videoMobile from './assets/videoMobile.mp4';
 
 import './SecondaryHero.css';
 
+const ID = 1;
+
 export default class SecondaryHero extends React.Component {
 
     constructor(props) {
@@ -49,21 +51,28 @@ export default class SecondaryHero extends React.Component {
 
         const desktopVideoClass = `secondary-hero__video-desktop secondary-hero__video-desktop${this.scaleModifier}`
 
+        let animateClass;
+
+        if (this.props.jumpToId === ID) {
+            animateClass = 'fade-in';
+        }
 
         return (
             <section className="secondary-hero">
             <div className="anchor" id="secondary-hero"></div>
                 <div className="video-container">
-                    <video ref={this.videoElDesktop} src={videoDesktop} className={desktopVideoClass} width="620"></video>
-                    <video ref={this.videoElMobile} src={videoMobile} className="secondary-hero__video-mobile" width="620"></video>
+                    <div className={animateClass}>
+                        <video ref={this.videoElDesktop} src={videoDesktop} className={desktopVideoClass} width="620"></video>
+                        <video ref={this.videoElMobile} src={videoMobile} className="secondary-hero__video-mobile" width="620"></video>
+                    </div>
                 </div>
                 <div className="secondary-hero__content-container">
-                    <div>
-                    <Content
-                        heading="What is a credit score?"
-                        paragraph={paragraph}
-                        link={link}
-                        cta="Get started" />
+                    <div className={animateClass}>
+                        <Content
+                            heading="What is a credit score?"
+                            paragraph={paragraph}
+                            link={link}
+                            cta="Get started" />
                     </div>
                     <Chevron />
                 </div>

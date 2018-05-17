@@ -30,9 +30,9 @@ class Header extends React.Component {
 
     handleScroll(event) {
         const offsetY = window.pageYOffset;
-        if (offsetY >= 590 && offsetY <= 5750) {
+        if (offsetY >= 465 && offsetY < 4000) {
             this.setState({hasScrolled: true});
-        } else if (offsetY <= 605 || offsetY > 5800) {
+        } else if (offsetY <= 605 || offsetY > 4000) {
             this.setState({hasScrolled: false});
         }
 
@@ -44,10 +44,6 @@ class Header extends React.Component {
 
     jumpTo(id) {
         this.props.updateJumpToId(id);
-    }
-
-    func(id) {
-        this.jumpTo(id)
     }
 
     render() {

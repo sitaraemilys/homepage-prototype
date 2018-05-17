@@ -8,6 +8,8 @@ import * as animationData from './coaching.json';
 
 import './Coaching.css';
 
+const ID = 3;
+
 export default class Coaching extends React.Component {
 
     constructor(props) {
@@ -49,22 +51,32 @@ export default class Coaching extends React.Component {
 
         const paragraph = "Find out what's affecting your credit sore and how to improve it, so you can apply for finance with confidence. And with the help of our free coaching plans, you'll know exactly how to get your money in tip top shape. So whether you're buying a car or a home, or just want to bump up your credit score, we'll help you reach your financial goals.";
 
+        let animateClass;
+
+        if (this.props.jumpToId === ID) {
+            animateClass = 'fade-in';
+        }
+
         return (
             <section className="coaching">
                 <div className="anchor" id="coaching"></div>
                 <div className={containerClass}>
-                    <Lottie
-                        options={defaultOptions}
-                        height={500}
-                        width={500}
-                        isStopped={this.state.isStopped}
-                        isPaused={this.state.isPaused}/>
+                    <div className={animateClass}>
+                        <Lottie
+                            options={defaultOptions}
+                            height={500}
+                            width={500}
+                            isStopped={this.state.isStopped}
+                            isPaused={this.state.isPaused}/>
+                    </div>
                 </div>
                 <div className="coaching__content-container">
-                    <Content
-                        heading="Improve your credit score"
-                        paragraph={paragraph}
-                        cta="Sign up" />
+                    <div className={animateClass}>
+                        <Content
+                            heading="Improve your credit score"
+                            paragraph={paragraph}
+                            cta="Sign up" />
+                    </div>
                     <Chevron />
                 </div>
             </section>

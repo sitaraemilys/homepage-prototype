@@ -56,10 +56,9 @@ export default class Report extends React.Component {
         const containerClass = `report__animation-container report__animation-container${this.scaleModifier}`;
         let animateClass;
 
-        if (this.state.jumpTo) {
-            animateClass = 'fade-in fade-in--jump';
-        } else if (this.state.inView) {
-            animateClass = 'fade-in fade-in--scroll';
+
+        if (this.props.jumpToId === ID) {
+            animateClass = 'fade-in';
         }
 
         const paragraph = "Take control of your credit score with your full monthly credit report, for free. Viewing your credit report regularly is an easy way to understand what's affecting your score and how to improve it. It shows you what bans and lenders see when you apply for credit, so checking it could prevent any nasty surprises."

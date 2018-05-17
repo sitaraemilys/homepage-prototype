@@ -8,6 +8,8 @@ import * as animationData from './safe-hands.json';
 
 import './SafeHands.css';
 
+const ID = 5;
+
 export default class SafeHands extends React.Component {
 
     constructor(props) {
@@ -62,25 +64,35 @@ export default class SafeHands extends React.Component {
 
         const paragraph = "We know your financial data is important. That's why we use the latest 256-bit encyption to ensure your information stays, well, yours. We promise not to sell your data to anyone or send you spam. Ever.";
 
+        let animateClass;
+
+        if (this.props.jumpToId === ID) {
+            animateClass = 'fade-in';
+        }
+
         return (
             <section className="safe-hands">
                 <div className="safe-hands__background">
                     <div className={containerClass}>
-                        <Lottie
-                            options={defaultOptions}
-                            height={this.state.animationSize}
-                            width={this.state.animationSize}
-                            isStopped={this.state.isStopped}
-                            isPaused={this.state.isPaused}/>
+                        <div className={animateClass}>
+                            <Lottie
+                                options={defaultOptions}
+                                height={this.state.animationSize}
+                                width={this.state.animationSize}
+                                isStopped={this.state.isStopped}
+                                isPaused={this.state.isPaused}/>
+                        </div>
                     </div>
                 </div>
                 <div className="safe-hands__content-container">
-                    <Content
-                        heading="You're in safe hands"
-                        paragraph={paragraph}
-                        link="How are we keeping your data safe?"
-                        href=""
-                        cta="Sign up" />
+                    <div className={animateClass}>
+                        <Content
+                            heading="You're in safe hands"
+                            paragraph={paragraph}
+                            link="How are we keeping your data safe?"
+                            href=""
+                            cta="Sign up" />
+                    </div>
                     <Chevron />
                 </div>
                 <div className="anchor" id="safe-hands"></div>

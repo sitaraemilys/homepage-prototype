@@ -54,7 +54,7 @@ export default class Hero extends React.Component {
                 </div>
                 <div className="hero__video-container">
                     <div className="hero__video-content">
-                        <video ref={this.videoEl} src={video} className="hero__video">
+                        <video ref={this.videoEl} src={video} className="hero__video" autoPlay="true">
                         </video>
                         <img className="hero__iphone" src={iphone}/>
                     </div>

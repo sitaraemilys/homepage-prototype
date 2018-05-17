@@ -1,5 +1,16 @@
 @import 'sass/_base';
 
+.hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid black;
+    margin: 1em 0;
+    padding: 0;
+    width: 150px;
+    position: absolute;
+}
+
 .header-mobile {
     display: flex;
     height: 60px;
