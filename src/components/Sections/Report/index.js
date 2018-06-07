@@ -61,7 +61,7 @@ export default class Report extends React.Component {
             animateClass = 'fade-in';
         }
 
-        const paragraph = "Take control of your credit score with your full monthly credit report, for free. Viewing your credit report regularly is an easy way to understand what's affecting your score and how to improve it. It shows you what bans and lenders see when you apply for credit, so checking it could prevent any nasty surprises."
+        const paragraph = "Understand what’s affecting your score and how to improve it with your full monthly credit report. It shows you what banks and lenders see when you apply for credit, so checking it could prevent any nasty surprises."
         return (
             <section className="report">
                 <div className={containerClass}>
@@ -77,9 +77,9 @@ export default class Report extends React.Component {
                 <div className="report__content-container">
                     <div className={animateClass}>
                         <Content
-                            heading="Your free credit report"
+                            heading="Check your free credit report"
                             paragraph={paragraph}
-                            cta="Get my report" />
+                            cta="See my report" />
                     </div>
                     <Chevron />
                 </div>

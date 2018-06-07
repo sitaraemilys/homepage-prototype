@@ -48,7 +48,7 @@ export default class Offers extends React.Component {
         };
 
         const containerClass = `offers__animation-container offers__animation-container${this.scaleModifier}`;
-        const paragraph = "We find you the best deals for credit cards, loans, mortgages and energy based on your financial situation, and tell you how likely you are to be accepted. Compare the best options on the market, personalised for you, all in one place. We search the market, so you don't have to."
+        const paragraph = "We find you the best deals for credit cards, loans, mortgages and energy based on your financial situation, and tell you how likely you are to be accepted. Compare the best options on the market, personalised for you, all in one place."
 
         let animateClass;
 
@@ -73,7 +73,7 @@ export default class Offers extends React.Component {
                         <Content
                             heading="Offers tailored to you"
                             paragraph={paragraph}
-                            cta="Show me my offers" />
+                            cta="Get started" />
                     </div>
                     <Chevron />
                 </div>

@@ -9,6 +9,12 @@ import iphone from './assets/iphone.png';
 
 import './Hero.css';
 
+const SECONDARY_DONUT = 1;
+const REPORT = 2;
+const COACHING = 3;
+const OFFERS = 4;
+const SAFE_HANDS = 5;
+
 export default class Hero extends React.Component {
 
     constructor(props) {
@@ -28,6 +34,10 @@ export default class Hero extends React.Component {
         this.loadAnimation();
     }
 
+    jumpTo(id) {
+        this.props.updateJumpToId(id);
+    }
+
     render() {
 
         return (
@@ -40,13 +50,13 @@ export default class Hero extends React.Component {
                             <Button theme="responsive-secondary" children="Learn more"/>
                         </div>
                         <div className="hero__secondary-content">
-                            <h4 className="hero__subheading">Do more with your score</h4>
+                            <h4 className="hero__subheading">Why ClearScore?</h4>
                             <ul className="hero__list">
-                                <LiTickLink text="What is a credit score" link="#secondary-hero"></LiTickLink>
-                                <LiTickLink text="Your free credit report" link="#report"></LiTickLink>
-                                <LiTickLink text="Improve your credit score" link="#coaching"></LiTickLink>
-                                <LiTickLink text="Offers tailored for you" link="#offers"></LiTickLink>
-                                <LiTickLink text="You're in safe hands" link="#safe-hands"></LiTickLink>
+                                <LiTickLink text="Track your free credit score" link="#secondary-hero"></LiTickLink>
+                                <LiTickLink text="Check your free credit report" link="#report"></LiTickLink>
+                                <LiTickLink text="Get a better score" link="#coaching"></LiTickLink>
+                                <LiTickLink text="Offers tailored to you" link="#offers"></LiTickLink>
+                                <LiTickLink text="Your data's in safe hands" link="#safe-hands"></LiTickLink>
                             </ul>
                             <Chevron />
                         </div>

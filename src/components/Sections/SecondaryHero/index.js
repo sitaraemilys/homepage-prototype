@@ -46,7 +46,7 @@ export default class SecondaryHero extends React.Component {
 
     render() {
 
-        const paragraph = "It’s a rating based on your financial history, showing how likely you are to be accepted for credit. The higher your credit score, the more likely you are to be offered better deals and lower interest rates. Your score can go up and down - ClearScore can help you track the changes and stay on top of your score."
+        const paragraph = "Your credit score is a rating based on your financial history. With a higher score, you could get better deals and lower interest rates on finance. ClearScore can help you track the changes and stay on top of your score."
         const link = " Read our in-depth guide to credit scores.";
 
         const desktopVideoClass = `secondary-hero__video-desktop secondary-hero__video-desktop${this.scaleModifier}`
@@ -69,10 +69,10 @@ export default class SecondaryHero extends React.Component {
                 <div className="secondary-hero__content-container">
                     <div className={animateClass}>
                         <Content
-                            heading="What is a credit score?"
+                            heading="Track your free credit score"
                             paragraph={paragraph}
                             link={link}
-                            cta="Get started" />
+                            cta="See my score" />
                     </div>
                     <Chevron />
                 </div>

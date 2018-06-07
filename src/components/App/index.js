@@ -64,7 +64,7 @@ export default class App extends React.Component {
                         sectionId={this.state.sectionId}
                         openMobileMenu={boundOpenMobileMenu} />
                 {mobileMenu}
-                <Hero jumpToId={this.state.jumpToId} updateSectionId={boundSectionId} />
+                <Hero jumpToId={this.state.jumpToId} updateJumpToId={boundJumpToId} />
                 <SecondaryHero jumpToId={this.state.jumpToId} updateSectionId={boundSectionId} />
                 <Report jumpToId={this.state.jumpToId} updateSectionId={boundSectionId} />
                 <Coaching jumpToId={this.state.jumpToId} updateSectionId={boundSectionId} />

@@ -49,7 +49,7 @@ export default class Coaching extends React.Component {
 
         const containerClass = `coaching__animation-container coaching__animation-container${this.scaleModifier}`;
 
-        const paragraph = "Find out what's affecting your credit sore and how to improve it, so you can apply for finance with confidence. And with the help of our free coaching plans, you'll know exactly how to get your money in tip top shape. So whether you're buying a car or a home, or just want to bump up your credit score, we'll help you reach your financial goals.";
+        const paragraph = "With our free coaching plans, see what’s affecting your score and how to improve it. So whether you’re buying a car or a home, or just want to bump up your credit score, we’ll help you reach your financial goals.";
 
         let animateClass;
 
@@ -73,7 +73,7 @@ export default class Coaching extends React.Component {
                 <div className="coaching__content-container">
                     <div className={animateClass}>
                         <Content
-                            heading="Improve your credit score"
+                            heading="Get a better score"
                             paragraph={paragraph}
                             cta="Sign up" />
                     </div>

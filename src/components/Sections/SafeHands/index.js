@@ -62,7 +62,7 @@ export default class SafeHands extends React.Component {
 
         const containerClass = `safe-hands__animation-container safe-hands__animation-container${this.scaleModifier}`;
 
-        const paragraph = "We know your financial data is important. That's why we use the latest 256-bit encyption to ensure your information stays, well, yours. We promise not to sell your data to anyone or send you spam. Ever.";
+        const paragraph = "We know your financial data is important. That’s why we use bank-level encryption to ensure your information stays, well, yours. We promise never to sell your data to anyone or send you spam. Ever.";
 
         let animateClass;
 
@@ -87,7 +87,7 @@ export default class SafeHands extends React.Component {
                 <div className="safe-hands__content-container">
                     <div className={animateClass}>
                         <Content
-                            heading="You're in safe hands"
+                            heading="Your data's in safe hands"
                             paragraph={paragraph}
                             link="How are we keeping your data safe?"
                             href=""
